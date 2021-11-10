@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: org.ppgti.dslperson
+Bundle-ManifestVersion: 2
+Bundle-Name: org.ppgti.dslperson
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: org.ppgti.dslperson; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.emf.ecore,
+ org.eclipse.xtext.xbase.lib;bundle-version="2.14.0",
+ org.eclipse.xtext.util,
+ org.eclipse.emf.common,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: org.ppgti.dslperson.parser.antlr,
+ org.ppgti.dslperson.scoping,
+ org.ppgti.dslperson.parser.antlr.internal,
+ org.ppgti.dslperson.dslPerson,
+ org.ppgti.dslperson.dslPerson.util,
+ org.ppgti.dslperson.serializer,
+ org.ppgti.dslperson.generator,
+ org.ppgti.dslperson.dslPerson.impl,
+ org.ppgti.dslperson.validation,
+ org.ppgti.dslperson.services,
+ org.ppgti.dslperson
+Import-Package: org.apache.log4j

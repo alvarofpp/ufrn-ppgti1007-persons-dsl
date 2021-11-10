@@ -1,0 +1,35 @@
+grammar org.ppgti.dslperson.DslPerson with org.eclipse.xtext.common.Terminals
+
+generate dslPerson "http://www.ppgti.org/dslperson/DslPerson"
+
+Persons:
+	persons+=Person*
+;
+	
+Person:
+	'person' cpf=ValidID '{' ((attributes+=Attribute) (',' attributes+=Attribute)*)? '}'
+;
+
+ValidID:
+	ID | Cpf
+;
+
+Cpf:
+	INT'.'INT'.'INT'-'INT
+;
+
+Attribute:
+	key=STRING ':' value=Value
+;
+
+Value:
+	INT | STRING | ANY_OTHER | Date | Boolean
+;
+
+Date:
+	INT'/'INT'/'INT
+;
+
+Boolean:
+    'true' | 'false'
+;
