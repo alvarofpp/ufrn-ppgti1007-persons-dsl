@@ -48,7 +48,7 @@ Boolean:
 
 ## Use
 
-```json
+```
 person {cpf} {
     "{attribute_key}": {attribute_value},
     "{another_attribute_key}": {another_attribute_value}
@@ -59,7 +59,7 @@ person {cpf} {
 
 ### Input
 
-```json
+```
 person 111.111.111-11 {
     "fullname": "Alvaro Ferreira Pires de Paiva",
     "birthday": 25/07/1997
